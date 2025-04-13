@@ -1,47 +1,81 @@
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: inherit;
-    width: 1260px;
-    padding-top: 15px;
-    position: relative;   
-    
-}
-.logo{
-    font-family: "Berkshire Swash", serif;
-    font-weight: 400;
-    font-size: 32px;
-    color: var(--purple);
-    margin-right: 300px;
-}
-.icy{
-    color: var(--pink);
-    margin: 0;
-}
-.links{
-    display: flex;
-    gap: 40px;    
-    padding: 17px;
-    margin: 0 32px;
+.header {
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  background: none;
 }
 
-.links a{
-    text-decoration: none;
-    color: var(--textblack);
-    font-weight: 400;
-    font-size: 16px;
+.header-content {
+  max-width: 1260px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.logo {
+  font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: var(--purple);
+  margin-right: 40px;
 }
-.header-right{
-    display: flex;
-    align-items: center;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
 }
-.header-icons{
-    margin-left: 8px;
-    display: flex;
-    position: relative;
+
+.logo-container img {
+  height: 80px;
+}
+.icy {
+  color: var(--pink);
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--textblack);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .links {
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 0 20px;
-    cursor: pointer;
+    padding: 0;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 }

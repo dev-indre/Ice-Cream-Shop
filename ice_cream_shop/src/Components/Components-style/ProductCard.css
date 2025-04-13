@@ -1,0 +1,32 @@
+.product-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: left;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.product-info h4 {
+  margin-top: 12px;
+  font-size: 20px;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: #777;
+  margin: 8px 0;
+}
+
+.product-price {
+  font-weight: bold;
+  color: var(--pink);
+  font-size: 18px;
+}

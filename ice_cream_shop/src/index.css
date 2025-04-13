@@ -2,14 +2,12 @@
   --black: #0f0200;
   --textblack: #212529;
   --white: #fff;
-  --pink: #F83D8E;
+  --pink: #f83d8e;
   --purple: #683292;
   --textgray: #646464;
-  --yellow: #FFD800;
-
-
+  --yellow: #ffd800;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,8 +19,12 @@
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.btn{
+.btn {
   /* font-weight: bold; */
   font-size: 16px;
   text-align: center;
@@ -32,14 +34,19 @@
   color: var(--white);
   cursor: pointer;
 }
-.btn:hover{
-  box-shadow:  0 8px 16px 0 rgba(254, 13, 113, 0.285);
+.btn:hover {
+  box-shadow: 0 8px 16px 0 rgba(254, 13, 113, 0.285);
 }
-.background-hero-header{
-  background: linear-gradient(90deg, rgba(241,231,244,1) 0%, rgba(244,247,250,1) 37%, rgba(243,240,235,1) 100%);
-  min-height: 710px;  
+.background-hero-header {
+  background: linear-gradient(
+    90deg,
+    rgba(241, 231, 244, 1) 0%,
+    rgba(244, 247, 250, 1) 37%,
+    rgba(243, 240, 235, 1) 100%
+  );
+  max-height: 910px;
 }
-.background-ice-cream{
+.background-ice-cream {
   background-image: url("../src/assets/img/banner-lefttopimage.png");
   background-repeat: no-repeat;
   background-position: 0px 50px;
