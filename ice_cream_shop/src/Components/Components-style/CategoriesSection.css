@@ -1,0 +1,43 @@
+.categories-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.describtion-cat {
+  font-size: 20px;
+  color: var(--textgray);
+  margin: 40px auto 0 auto;
+  max-width: 700px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 60px; /* bigger spacing between cards */
+  width: 100%;
+  max-width: 1500px; /* let it breathe a bit more */
+  margin-top: 60px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .categories-section {
+    padding: 40px 16px;
+  }
+
+  .describtion {
+    font-size: 16px;
+    margin: 24px auto 0 auto;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

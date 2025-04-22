@@ -1,3 +1,4 @@
+import CategoriesSection from "./Components/CategoriesSection";
 import FirstSection from "./Components/FirstSection";
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
@@ -11,6 +12,7 @@ export default function App() {
         <Hero />
         <FirstSection />
         <ProductSection />
+        <CategoriesSection />
       </div>
     </div>
   );

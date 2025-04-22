@@ -5,7 +5,7 @@ import "./Components-style/ProductSection.css";
 export default function ProductSection() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("/products") // gauti duomenis i korteles
+    fetch("/api/products") // gauti duomenis i korteles
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error("Error:", err));
@@ -13,7 +13,7 @@ export default function ProductSection() {
   return (
     <section className="product-section">
       <h2 className="text-big">
-        Our <span className="text-big icy">Classic</span>Classic Favorites
+        Our <span className="text-big icy">Classic</span> Favorites
       </h2>
       <p className="describtion">
         Check out our top products that our customers love.
