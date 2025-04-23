@@ -10,6 +10,7 @@ export default function ProductSection() {
       .then((data) => setProducts(data))
       .catch((err) => console.error("Error:", err));
   }, []);
+  console.log(products);
   return (
     <section className="product-section">
       <h2 className="text-big">
@@ -23,7 +24,7 @@ export default function ProductSection() {
           <ProductCard
             key={prod.id}
             name={prod.name}
-            image={prod.image_url}
+            image={prod.ProductImages?.[0]?.image_url}
             price={prod.price}
             description={prod.description}
           />

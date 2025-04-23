@@ -3,6 +3,7 @@ import productRoutes from "./routes/products.js";
 import { createProxyMiddleware } from "http-proxy-middleware";
 import "./config/connect-mysql.js";
 import categoryRoutes from "./routes/categories.js";
+import "./models/setUpAssociations.js";
 
 const app = express();
 app.use(express.json());

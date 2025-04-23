@@ -1,0 +1,131 @@
+.purple-section {
+  background: var(--purple);
+  padding: 80px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 80px auto;
+  min-width: 1200px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.purple-box {
+  margin-left: 400px;
+  max-width: 540px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: left;
+  padding: 100px 0 100px 0;
+}
+.white-text {
+  color: var(--white);
+}
+.purple-paragraph {
+  font-size: 24px;
+  color: var(--white);
+  padding-top: 40px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.btn-box {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.code {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--white);
+}
+.ice-cream-cone {
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  width: 300px;
+  height: 100%;
+  background-image: url("../../assets/img/right-cone.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+  pointer-events: none;
+}
+.discount {
+  position: absolute;
+  top: 180px;
+  left: 925px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.discount .doted-arrow {
+  position: absolute;
+  top: -40px;
+  right: -300px;
+  transform: rotate(6deg);
+  margin-bottom: -20px;
+  z-index: 2;
+}
+
+.discount .discount-badge {
+  position: absolute;
+  top: 30px;
+  right: -110px;
+}
+
+@media (max-width: 768px) {
+  .purple-section {
+    flex-direction: column;
+    padding: 5px 20px;
+  }
+
+  .purple-box {
+    align-items: center;
+    text-align: center;
+    padding: 5px 20px;
+    margin: 0;
+  }
+
+  .white-text {
+    font-size: 36px;
+  }
+
+  .purple-paragraph {
+    font-size: 18px;
+  }
+
+  .code {
+    font-size: 13px;
+  }
+
+  .btn-box {
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ice-cream-cone {
+    width: 220px;
+    top: 0;
+    right: 0;
+  }
+
+  .discount {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .discount .doted-arrow {
+    width: 80px;
+    margin-bottom: -10px;
+  }
+
+  .discount .discount-badge {
+    width: 90px;
+  }
+}
