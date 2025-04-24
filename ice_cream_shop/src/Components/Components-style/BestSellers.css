@@ -1,0 +1,6 @@
+.best-sellers-section {
+  min-height: 880px;
+  padding: 100px 40px;
+  background-color: var(--white);
+  text-align: center;
+}

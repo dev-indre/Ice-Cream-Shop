@@ -16,6 +16,7 @@
     "http-proxy-middleware": "^3.0.5",
     "mysql2": "^3.14.0",
     "sequelize": "^6.37.7",
+    "swiper": "^11.2.6",
     "zod": "^3.24.3"
   }
 }

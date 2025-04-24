@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import "./Components-style/ProductSection.css";
-import "./Components-style/BestSellers.css";
 
-export default function ProductSection() {
+export default function BestSellers() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("/api/products") // gauti duomenis i korteles
@@ -13,15 +12,15 @@ export default function ProductSection() {
   }, []);
   console.log(products);
   return (
-    <section className="product-section">
+    <section className="best-sellers-section">
       <h2 className="text-big">
-        Our <span className="text-big icy">Classic</span> Favorites
+        Our <span className="text-big icy">Best</span> Sellers
       </h2>
       <p className="describtion">
-        Check out our top products that our customers love.
+        Discover the favorites that keep our customers coming back for more.
       </p>
       <div className="product-grid">
-        {products.slice(-4).map((prod) => (
+        {products.slice(0, 4).map((prod) => (
           <ProductCard
             key={prod.id}
             name={prod.name}
