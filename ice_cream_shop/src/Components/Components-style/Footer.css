@@ -1,0 +1,136 @@
+.footer {
+  background: var(--purple);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+  padding: 80px 40px;
+  background-image: url("../../assets/img/footer-image.png");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+.logo-container-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: self-start;
+}
+.logo-footer {
+  font-family: "Berkshire Swash", serif;
+  font-size: 32px;
+  color: var(--white);
+}
+.logo-flex {
+  display: flex;
+  align-items: center;
+  /* gap: 12px; */
+}
+
+.logo-flex img {
+  width: 50px;
+  height: auto;
+}
+.logo-container-footer .logo {
+  font-size: 28px;
+  color: var(--white);
+}
+
+.logo-container-footer .icy {
+  color: var(--pink);
+}
+
+.navigation-links {
+  display: flex;
+  gap: 60px;
+  justify-content: flex-start;
+}
+.navigation {
+  font-weight: 600;
+  font-size: 22px;
+  text-align: left;
+  padding-bottom: 15px;
+}
+.navigation-links ul {
+  list-style: disc;
+  color: var(--pink);
+  padding: 0;
+}
+
+.navigation-links ul li {
+  margin: 20px 0;
+}
+
+.navigation-links a {
+  color: #cfb6e2;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navigation-links a:hover {
+  color: var(--pink);
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-item p {
+  margin: 2px 0;
+  text-align: left;
+}
+.contact-header {
+  text-align: left;
+}
+.contact-items {
+  color: #cfb6e2;
+  font-size: 14px;
+}
+.footer-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: var(--white);
+  background-color: rgba(244, 244, 244, 0.144);
+  border-radius: 50px;
+}
+.phone {
+  font-size: 30px;
+}
+.block-first {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.block-second {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.copyright {
+  background: var(--purple);
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #cfb6e2;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation ul {
+    align-items: center;
+  }
+}
