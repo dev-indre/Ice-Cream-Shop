@@ -2,8 +2,11 @@ import "./Components-style/FirstSection.css";
 import girl_photo from "../assets/img/Girl.png";
 import Button from "../UI/Button";
 import arrow from "../assets/img/arrow_right.png";
+import { useNavigate } from "react-router";
 
 export default function FirstSection() {
+  let navigate = useNavigate();
+
   return (
     <div className="container">
       <div className="girl_image">
@@ -11,14 +14,19 @@ export default function FirstSection() {
       </div>
       <div className="text-first-section">
         <h3 className="text-big">
-          Relive the Sweet Memories of Classic{" "}
-          <span className="text-big icy">Ice Creams</span>
+          Relive the Sweet Memories of Classic
+          <span className="text-big icy"> Ice Creams</span>
         </h3>
         <p className="first-parag">
           From rich chocolate fudge to creamy vanilla sundaes, discover our menu
           of classic ice cream creations.
         </p>
-        <Button background="#F83D8E">
+        <Button
+          background="#F83D8E"
+          onClick={() => {
+            navigate("/menu");
+          }}
+        >
           Explore Our Menu <img src={arrow} alt="arrow-right" />
         </Button>
       </div>

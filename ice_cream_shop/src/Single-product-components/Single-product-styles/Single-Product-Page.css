@@ -153,6 +153,11 @@
   font-size: 20px;
   font-weight: bold;
 }
+.fade-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 768px) {
   .product-container {
@@ -161,7 +166,7 @@
   }
 
   .product-info {
-    text-align: center;
+    text-align: left;
   }
   .related-grid {
     display: flex;

@@ -5,7 +5,7 @@ import "./Single-product-styles/Single-Product-Page.css";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import arrow from "../assets/img/arrow_right.png";
-import { Link } from "react-router";
+import FadeLoader from "react-spinners/FadeLoader";
 import ProductCard from "../Components/ProductCard";
 
 export default function SingleProductPage() {
@@ -35,7 +35,7 @@ export default function SingleProductPage() {
   }, [id]);
 
   if (!product) {
-    return <p>Loading...</p>;
+    return <FadeLoader color="#f83d8e9c" margin={2} className="fade-loader" />;
   }
 
   return (
