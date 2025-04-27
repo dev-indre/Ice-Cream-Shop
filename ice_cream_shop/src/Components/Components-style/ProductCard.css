@@ -7,8 +7,13 @@
   padding: 20px;
   max-width: 300px;
   position: relative;
+  color: inherit;
+  text-decoration: none;
 }
-
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 .product-card img {
   width: 100%;
   height: auto;
@@ -18,6 +23,7 @@
 .product-info h4 {
   margin-top: 12px;
   font-size: 20px;
+  color: var(--black);
 }
 
 .product-desc {

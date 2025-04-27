@@ -24,6 +24,7 @@ export default function ProductSection() {
         {products.slice(-4).map((prod) => (
           <ProductCard
             key={prod.id}
+            id={prod.id}
             name={prod.name}
             image={prod.ProductImages?.[0]?.image_url}
             price={prod.price}

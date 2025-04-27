@@ -16,7 +16,7 @@ export default function Header() {
           </span>
         </div>
         <nav className="links">
-          <a href="#">Home</a>
+          <a href="/">Home</a>
           <a href="#">About Us</a>
           <a href="#">Pages</a>
           <a href="#">Blog</a>

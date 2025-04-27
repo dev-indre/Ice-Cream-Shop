@@ -35,7 +35,9 @@ router.get("/", async (req, res) => {
 //produkto gavimas pagal id
 router.get("/:id", async (req, res) => {
   try {
-    const product = await Products.findByPk(req.params.id);
+    const product = await Products.findByPk(req.params.id, {
+      include: [{ model: ProductImages }],
+    });
     if (!product) return res.status(404).json({ message: "Not found" });
     res.status(200).json(product);
   } catch (err) {

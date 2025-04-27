@@ -10,7 +10,7 @@ import Socials from "./Components/Socials";
 import Subscribe from "./Components/Subscribe";
 import SummerSpecial from "./Components/SummerSpecial";
 
-export default function App() {
+export default function HomePage() {
   return (
     <div className="background-hero-header">
       <div className="background-ice-cream">
