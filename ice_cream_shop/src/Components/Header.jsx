@@ -5,8 +5,15 @@ import cart from "../assets/img/cart.png";
 import Button from "../UI/Button";
 import arrow from "../assets/img/arrow_right.png";
 import { NavLink } from "react-router";
+import { useState } from "react";
 
 export default function Header() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  function toggleDropdown() {
+    setIsDropdownOpen(!isDropdownOpen);
+  }
+
   return (
     <div className="header wrapper">
       <div className="header-content">
@@ -18,10 +25,21 @@ export default function Header() {
         </div>
         <nav className="links">
           <NavLink to="/">Home</NavLink>
-          <a href="#">About Us</a>
-          <a href="#">Pages</a>
-          <a href="#">Blog</a>
-          <a href="#">Faq's</a>
+          <NavLink to="/about">About Us</NavLink>
+          <div className="dropdown">
+            <span className="dropdown-title" onClick={toggleDropdown}>
+              Pages ▾
+            </span>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <NavLink to="/menu">Products</NavLink>
+                <NavLink to="/products-registration">Create Product</NavLink>
+              </div>
+            )}
+          </div>
+
+          <a href="/blog">Blog</a>
+          <a href="/faq">Faq's</a>
         </nav>
         <div className="header-right">
           <div className="header-icons">

@@ -5,5 +5,7 @@ export const ProductsValidation = z.object({
   description: z.string().max(2000).optional(),
   price: z.number().min(0.01).max(99999999.99).optional(),
   status: z.enum(["Aktyvus", "Nebetiekiamas", "Mažėjantis likutis"]).optional(),
+  category_id: z.number().optional(),
   deleted_at: z.date().optional(),
+  image_url: z.string().optional(),
 });
