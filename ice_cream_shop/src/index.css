@@ -36,17 +36,9 @@
 .btn:hover {
   box-shadow: 0 8px 16px 0 rgba(254, 13, 113, 0.285);
 }
-.background-hero-header {
-  background: linear-gradient(
-    90deg,
-    rgba(241, 231, 244, 1) 0%,
-    rgba(244, 247, 250, 1) 37%,
-    rgba(243, 240, 235, 1) 100%
-  );
-  max-height: 910px;
+.links .active {
+  color: var(--pink);
 }
-.background-ice-cream {
-  background-image: url("../src/assets/img/banner-lefttopimage.png");
-  background-repeat: no-repeat;
-  background-position: 0px 50px;
+.active {
+  color: var(--pink);
 }

@@ -4,6 +4,7 @@ import search from "../assets/img/search.png";
 import cart from "../assets/img/cart.png";
 import Button from "../UI/Button";
 import arrow from "../assets/img/arrow_right.png";
+import { NavLink } from "react-router";
 
 export default function Header() {
   return (
@@ -16,7 +17,7 @@ export default function Header() {
           </span>
         </div>
         <nav className="links">
-          <a href="/">Home</a>
+          <NavLink to="/">Home</NavLink>
           <a href="#">About Us</a>
           <a href="#">Pages</a>
           <a href="#">Blog</a>

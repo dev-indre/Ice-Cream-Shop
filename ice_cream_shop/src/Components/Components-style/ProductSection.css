@@ -7,7 +7,7 @@
 .product-section::before {
   content: "";
   position: absolute;
-  top: 1920px;
+  top: 1750px;
   left: 0px;
   width: 283px;
   height: 437px;
@@ -16,7 +16,7 @@
 .product-section::after {
   content: "";
   position: absolute;
-  top: 2166px;
+  top: 2000px;
   right: 0;
   width: 212px;
   height: 500px;
@@ -36,4 +36,12 @@
   gap: 20px;
   max-width: 1260px;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .product-section::before {
+    background: none;
+  }
+  .product-section::after {
+    background: none;
+  }
 }

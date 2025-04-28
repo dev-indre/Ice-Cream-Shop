@@ -8,7 +8,7 @@ import logo from "../assets/img/logo.png";
 export default function Footer() {
   return (
     <>
-      <div className="footer">
+      <footer className="footer">
         <div className="logo-container-footer">
           <div className="logo-flex">
             <img src={logo} alt="Ice_cream_logo" />
@@ -76,7 +76,7 @@ export default function Footer() {
             <FaXTwitter className="footer-icon" />
           </div>
         </div>
-      </div>
+      </footer>
       <div className="copyright">
         Copyright © 2024 BlackRise Themes Inc. All rights reserved.
       </div>

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import ProductCard from "../Components/ProductCard";
-import "./Single-product-styles/ProductsMenu.css";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import "./pages-styles/ProductsMenu.css";
 import Button from "../UI/Button";
 
 export default function ProductsMenu() {
@@ -33,7 +31,6 @@ export default function ProductsMenu() {
 
   return (
     <>
-      <Header />
       <div className="menu-section">
         <h2 className="text-big">
           Our <span className="text-big icy">Menu</span>
@@ -78,8 +75,6 @@ export default function ProductsMenu() {
           ))}
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }

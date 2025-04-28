@@ -1,9 +1,7 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import Button from "../UI/Button";
-import "./Single-product-styles/Single-Product-Page.css";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import "./pages-styles/Single-Product-Page.css";
 import arrow from "../assets/img/arrow_right.png";
 import FadeLoader from "react-spinners/FadeLoader";
 import ProductCard from "../Components/ProductCard";
@@ -13,7 +11,6 @@ export default function SingleProductPage() {
   const [product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [quantity, setQuantity] = useState(1);
-  const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
 
   useEffect(() => {
@@ -40,8 +37,6 @@ export default function SingleProductPage() {
 
   return (
     <>
-      <Header />
-
       <section className="single-product">
         <div className="product-details">
           <img
@@ -55,31 +50,6 @@ export default function SingleProductPage() {
               <p className="price">${Number(product.price).toFixed(2)}</p>
             )}
             <p className="description">{product.description}</p>
-
-            {/* Spalvos parinkimas */}
-            <div className="product-options">
-              <h4>Color:</h4>
-              <div className="color-options">
-                <span
-                  className={`color-circle red ${
-                    selectedColor === "red" ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedColor("red")}
-                ></span>
-                <span
-                  className={`color-circle green ${
-                    selectedColor === "green" ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedColor("green")}
-                ></span>
-                <span
-                  className={`color-circle brown ${
-                    selectedColor === "brown" ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedColor("brown")}
-                ></span>
-              </div>
-            </div>
 
             {/* Ledu dydis */}
             <div className="product-options">
@@ -153,8 +123,6 @@ export default function SingleProductPage() {
           ))}
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }

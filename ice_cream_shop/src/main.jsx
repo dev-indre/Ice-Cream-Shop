@@ -2,25 +2,41 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import HomePage from "./HomePage.jsx";
-import SingleProductPage from "./Single-product-components/Single-Product-Page.jsx";
-import ProductsMenu from "./Single-product-components/ProductsMenu.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import SingleProductPage from "./pages/Single-Product-Page.jsx";
+import ProductsMenu from "./pages/ProductsMenu.jsx";
+import Layout from "./pages/Layout.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import ProductsCreation from "./pages/ProductsCreation.jsx";
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
   {
-    path: "/products/:id",
-    element: <SingleProductPage />,
+    path: "/",
+    element: <Layout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      {
+        path: "/products/:id",
+        element: <SingleProductPage />,
+      },
+      {
+        path: "/menu",
+        element: <ProductsMenu />,
+      },
+      {
+        path: "/products-registration",
+        element: <ProductsCreation />,
+      },
+    ],
   },
   {
-    path: "/menu",
-    element: <ProductsMenu />,
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <App /> */}
     <RouterProvider router={router} />
   </StrictMode>
 );

@@ -3,12 +3,15 @@ import "./Components-style/Hero.css";
 import arrow from "../assets/img/arrow_right.png";
 import banner_image from "../assets/img/banner-image.png";
 import bottom_image from "../assets/img/bottom-banner.png";
+import { useNavigate } from "react-router";
 
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <>
-      <div className="hero">
-        <div className="wrapper hero-content">
+      <div className="hero-content background-hero-header ">
+        <div className="hero-background"></div>
+        <div className="hero-main-content">
           <div className="hero-mid">
             <h1>
               Welcome to The <br />
@@ -20,7 +23,12 @@ export default function Hero() {
               Relish the timeless taste of handcrafted ice cream, made with
               passion and the finest ingredients.
             </p>
-            <Button background="#683292">
+            <Button
+              background="#683292"
+              onClick={() => {
+                navigate("/menu");
+              }}
+            >
               Browse Our Classic Flavors <img src={arrow} alt="arrow-right" />
             </Button>
           </div>
